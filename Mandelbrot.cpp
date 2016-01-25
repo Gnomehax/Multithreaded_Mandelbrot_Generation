@@ -70,7 +70,14 @@ int main() {
 	std::cout << "Standard Deviation: " << standardDeviation << " ms" << std::endl;
 	std::cout << std::endl;
 
+	//reset variables for accurate standard deviation
+	variance = 0;
+	varianceSquared = 0;
+	varianceSum = 0;
+	standardDeviation = 0.0;
+
 	std::cout << "Serial timing:" << std::endl;
+	timeVector.clear();
 	for (int x = 0; x < 5; x++) {
 		auto startTime = std::chrono::steady_clock::now();
 		pixels.clear();
@@ -84,7 +91,7 @@ int main() {
 	}
 
 	auto sum10 = std::accumulate(timeVector.begin(), timeVector.end(), 0);
-	auto average10 = sum / timeVector.size();
+	auto average10 = sum10 / timeVector.size();
 
 	for (auto n : timeVector) {
 		variance = n - average10;
@@ -96,6 +103,12 @@ int main() {
 	std::cout << "Average: " << average10 << " ms" << std::endl;
 	std::cout << "Standard Deviation: " << standardDeviation << " ms" << std::endl;
 	std::cout << std::endl;
+
+	//reset variables for accurate standard deviation
+	variance = 0;
+	varianceSquared = 0;
+	varianceSum = 0;
+	standardDeviation = 0.0;
 
 	std::cout << "2 Parallel Threads timing:" << std::endl;
 	timeVector.clear();
@@ -131,6 +144,12 @@ int main() {
 	std::cout << "Speed Up: " << speedUp2 << std::endl;
 	std::cout << "Efficiency: " << efficiency2 << std::endl;
 	std::cout << std::endl;
+
+	//reset variables for accurate standard deviation
+	variance = 0;
+	varianceSquared = 0;
+	varianceSum = 0;
+	standardDeviation = 0.0;
 
 	std::cout << "3 Parallel Threads timing:" << std::endl;
 	timeVector.clear();
@@ -171,6 +190,12 @@ int main() {
 	std::cout << "Speed Up: " << speedUp3 << std::endl;
 	std::cout << "Efficiency: " << efficiency3 << std::endl;
 	std::cout << std::endl;
+
+	//reset variables for accurate standard deviation
+	variance = 0;
+	varianceSquared = 0;
+	varianceSum = 0;
+	standardDeviation = 0.0;
 
 	std::cout << "4 Parallel Threads timing:" << std::endl;
 	timeVector.clear();
@@ -215,6 +240,12 @@ int main() {
 	std::cout << "Speed Up: " << speedUp4 << std::endl;
 	std::cout << "Efficiency: " << efficiency4 << std::endl;
 	std::cout << std::endl;
+
+	//reset variables for accurate standard deviation
+	variance = 0;
+	varianceSquared = 0;
+	varianceSum = 0;
+	standardDeviation = 0.0;
 
 	std::cout << "5 Parallel Threads timing:" << std::endl;
 	timeVector.clear();
@@ -263,6 +294,12 @@ int main() {
 	std::cout << "Speed Up: " << speedUp5 << std::endl;
 	std::cout << "Efficiency: " << efficiency5 << std::endl;
 	std::cout << std::endl;
+
+	//reset variables for accurate standard deviation
+	variance = 0;
+	varianceSquared = 0;
+	varianceSum = 0;
+	standardDeviation = 0.0;
 
 	std::cout << "6 Parallel Threads timing:" << std::endl;
 	timeVector.clear();
@@ -315,6 +352,12 @@ int main() {
 	std::cout << "Speed Up: " << speedUp6 << std::endl;
 	std::cout << "Efficiency: " << efficiency6 << std::endl;
 	std::cout << std::endl;
+
+	//reset variables for accurate standard deviation
+	variance = 0;
+	varianceSquared = 0;
+	varianceSum = 0;
+	standardDeviation = 0.0;
 
 	std::cout << "7 Parallel Threads timing:" << std::endl;
 	timeVector.clear();
@@ -371,6 +414,12 @@ int main() {
 	std::cout << "Speed Up: " << speedUp7 << std::endl;
 	std::cout << "Efficiency: " << efficiency7 << std::endl;
 	std::cout << std::endl;
+
+	//reset variables for accurate standard deviation
+	variance = 0;
+	varianceSquared = 0;
+	varianceSum = 0;
+	standardDeviation = 0.0;
 
 	std::cout << "8 Parallel Threads timing:" << std::endl;
 	timeVector.clear();
