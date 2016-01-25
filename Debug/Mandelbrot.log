@@ -1,0 +1,9 @@
+﻿  Mandelbrot.cpp
+c:\users\josh\documents\visual studio 2015\projects\mandelbrot\mandelbrot\mandelbrot.cpp(123): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\josh\documents\visual studio 2015\projects\mandelbrot\mandelbrot\mandelbrot.cpp(163): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\josh\documents\visual studio 2015\projects\mandelbrot\mandelbrot\mandelbrot.cpp(207): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\josh\documents\visual studio 2015\projects\mandelbrot\mandelbrot\mandelbrot.cpp(255): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\josh\documents\visual studio 2015\projects\mandelbrot\mandelbrot\mandelbrot.cpp(307): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\josh\documents\visual studio 2015\projects\mandelbrot\mandelbrot\mandelbrot.cpp(363): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\josh\documents\visual studio 2015\projects\mandelbrot\mandelbrot\mandelbrot.cpp(423): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Mandelbrot.vcxproj -> C:\Users\Josh\Documents\Visual Studio 2015\Projects\Mandelbrot\Debug\Mandelbrot.exe
