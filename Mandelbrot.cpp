@@ -501,28 +501,20 @@ double mapImaginary(int y, int imageHeight, double minImaginary, double maxImagi
 	auto range = maxImaginary - minImaginary;
 	return y * (range / imageHeight) + minImaginary;
 }
-int findMandelbrot(double cReal, double cImaginary, int max_iter) {
+int findMandelbrot(double x0, double y0, int max_iter) {
 
 	auto i = 0; //iteration start
-	auto zReal = 0.0; //starting z real value
-	auto zImaginary = 0.0; //starting z imaginary value
+	auto x = x0; //starting z real value
+	auto y = y0; //starting z imaginary value
+	auto x2 = x * x;
+	auto y2 = y * y;
 
-	/* Mendalbrot Algorithm from wikipedia for reference
-	while ( x*x + y*y < 2*2  AND  iteration < max_iteration )
-	{
-	xtemp = x*x - y*y + x0
-	y = 2*x*y + y0
-	x = xtemp
-	iteration = iteration + 1
-	}
-	*/
-
-	while (i < max_iter && zReal * zReal + zImaginary * zImaginary < 4.0) {
-
-		auto temp = zReal * zReal - zImaginary * zImaginary + cReal; //temporary holder for new zreal value
-		zImaginary = 2.0 * zReal * zImaginary + cImaginary; //assign new zimaginary value
-		zReal = temp;//assign the temporary value to zreal
-		++i;
+	while (x2 + y2 < 4.0) {
+		if (++i == max_iter) break;
+		y = 2 * x * y + y0;
+		x = x2 - y2 + x0;
+		x2 = x * x;
+		y2 = y * y;
 	}
 
 	return i; // return iteration
